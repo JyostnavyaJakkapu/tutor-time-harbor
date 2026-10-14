@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Tutorly — Book a private tutor session" },
-      { name: "description", content: "Book one-to-one tutoring sessions with Tutorly in seconds." },
-      { property: "og:title", content: "Tutorly — Book a private tutor session" },
-      { property: "og:description", content: "Book one-to-one tutoring sessions with Tutorly in seconds." },
+      { title: "Tutorly Demo — Book a private tutor session" },
+      { name: "description", content: "Book one-to-one tutoring sessions with Tutorly Demo in seconds." },
+      { property: "og:title", content: "Tutorly Demo — Book a private tutor session" },
+      { property: "og:description", content: "Book one-to-one tutoring sessions with Tutorly Demo in seconds." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],

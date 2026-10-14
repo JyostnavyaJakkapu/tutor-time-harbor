@@ -8,10 +8,10 @@ import { Label } from "@/components/ui/label";
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Sign up or log in — Tutorly" },
-      { name: "description", content: "Create a Tutorly account or log in to manage your bookings." },
-      { property: "og:title", content: "Sign up or log in — Tutorly" },
-      { property: "og:description", content: "Create a Tutorly account or log in to manage your bookings." },
+      { title: "Sign up or log in — Tutorly Demo" },
+      { name: "description", content: "Create a Tutorly Demo account or log in to manage your bookings." },
+      { property: "og:title", content: "Sign up or log in — Tutorly Demo" },
+      { property: "og:description", content: "Create a Tutorly Demo account or log in to manage your bookings." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
