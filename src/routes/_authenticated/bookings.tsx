@@ -47,6 +47,16 @@ function BookingsPage() {
     },
   });
 
+  const cancel = useMutation({
+    mutationFn: async (id: string) => {
+      const { error } = await supabase.from("bookings").delete().eq("id", id);
+      if (error) throw error;
+    },
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["my-bookings"] });
+    },
+  });
+
   return (
     <main className="mx-auto grid max-w-5xl gap-10 px-6 py-14 md:grid-cols-[1fr_1.3fr]">
       <section>
