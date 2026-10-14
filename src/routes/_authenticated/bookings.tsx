@@ -92,9 +92,20 @@ function BookingsPage() {
           {!isLoading && bookings.length === 0 && <p className="text-muted-foreground">No bookings yet.</p>}
           {bookings.map((b) => (
             <div key={b.id} className="rounded-lg border border-border bg-card p-4">
-              <div className="flex items-baseline justify-between">
+              <div className="flex items-baseline justify-between gap-3">
                 <span className="font-medium text-foreground">{b.subject}</span>
-                <span className="text-sm text-primary">{b.date} · {b.time.slice(0, 5)}</span>
+                <span className="flex items-center gap-3">
+                  <span className="text-sm text-primary">{b.date} · {b.time.slice(0, 5)}</span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="text-destructive"
+                    disabled={cancel.isPending}
+                    onClick={() => { if (window.confirm(`Cancel the ${b.subject} session on ${b.date}?`)) cancel.mutate(b.id); }}
+                  >
+                    Cancel
+                  </Button>
+                </span>
               </div>
               {b.notes && <p className="mt-1 text-sm text-muted-foreground">{b.notes}</p>}
             </div>
