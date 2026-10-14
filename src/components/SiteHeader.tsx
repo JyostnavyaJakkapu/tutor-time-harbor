@@ -22,7 +22,7 @@ export function SiteHeader() {
   return (
     <header className="border-b border-border bg-background/80 backdrop-blur sticky top-0 z-10">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link to="/" className="font-display text-2xl text-primary">Tutorly</Link>
+        <Link to="/" className="font-display text-2xl text-primary">Tutorly Demo</Link>
         <nav className="flex items-center gap-6">
           <Link to="/" className={linkCls} activeProps={active} activeOptions={{ exact: true }}>Home</Link>
           {user && <Link to="/bookings" className={linkCls} activeProps={active}>My bookings</Link>}

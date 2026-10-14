@@ -79,8 +79,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Tutorly" },
-      { name: "description", content: "Book private tutoring sessions with Tutorly." },
+      { title: "Tutorly Demo" },
+      { name: "description", content: "Book private tutoring sessions with Tutorly Demo." },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },

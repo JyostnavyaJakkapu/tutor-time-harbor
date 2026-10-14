@@ -5,10 +5,10 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/_authenticated/admin")({
   head: () => ({
     meta: [
-      { title: "Admin — Tutorly" },
-      { name: "description", content: "All Tutorly bookings across students." },
-      { property: "og:title", content: "Admin — Tutorly" },
-      { property: "og:description", content: "All Tutorly bookings across students." },
+      { title: "Admin — Tutorly Demo" },
+      { name: "description", content: "All Tutorly Demo bookings across students." },
+      { property: "og:title", content: "Admin — Tutorly Demo" },
+      { property: "og:description", content: "All Tutorly Demo bookings across students." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "robots", content: "noindex" },

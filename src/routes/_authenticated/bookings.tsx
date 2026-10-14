@@ -10,10 +10,10 @@ import { Textarea } from "@/components/ui/textarea";
 export const Route = createFileRoute("/_authenticated/bookings")({
   head: () => ({
     meta: [
-      { title: "My bookings — Tutorly" },
-      { name: "description", content: "Create and view your Tutorly tutoring sessions." },
-      { property: "og:title", content: "My bookings — Tutorly" },
-      { property: "og:description", content: "Create and view your Tutorly tutoring sessions." },
+      { title: "My bookings — Tutorly Demo" },
+      { name: "description", content: "Create and view your Tutorly Demo tutoring sessions." },
+      { property: "og:title", content: "My bookings — Tutorly Demo" },
+      { property: "og:description", content: "Create and view your Tutorly Demo tutoring sessions." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
