@@ -46,6 +46,20 @@ function AuthPage() {
     setBusy(false);
   };
 
+  const sendReset = async () => {
+    if (!email) {
+      setMsg("Enter your email above first, then tap Forgot password.");
+      return;
+    }
+    setBusy(true);
+    setMsg(null);
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
+    setMsg(error ? error.message : "Reset link sent — check your inbox and follow the link to set a new password.");
+    setBusy(false);
+  };
+
   return (
     <main className="mx-auto max-w-md px-6 py-20">
       <h1 className="font-display text-4xl text-foreground">{mode === "login" ? "Welcome back" : "Create account"}</h1>
@@ -68,6 +82,11 @@ function AuthPage() {
         <Button type="submit" className="w-full" disabled={busy}>
           {mode === "login" ? "Log in" : "Sign up"}
         </Button>
+        {mode === "login" && (
+          <button type="button" className="w-full text-sm text-muted-foreground hover:text-foreground" onClick={sendReset} disabled={busy}>
+            Forgot password?
+          </button>
+        )}
         <button type="button" className="w-full text-sm text-muted-foreground hover:text-foreground"
           onClick={() => { setMode(mode === "login" ? "signup" : "login"); setMsg(null); }}>
           {mode === "login" ? "No account? Sign up" : "Have an account? Log in"}
